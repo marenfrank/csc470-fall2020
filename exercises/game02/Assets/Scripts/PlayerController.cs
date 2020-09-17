@@ -12,10 +12,13 @@ public class PlayerController : MonoBehaviour
     private int points;
     public GameObject winTextObject;
     private Rigidbody rb;
+    public GameObject Star;
+    GameObject park;
 
     // Start is called before the first frame update
     void Start()
     {
+        park = GameObject.Find("Park");
         rb = GetComponent<Rigidbody>();
         points = 0;
         SetPoints();
@@ -31,9 +34,15 @@ public class PlayerController : MonoBehaviour
         //jump!
         if(Input.GetKeyDown(KeyCode.UpArrow))
         {
+            //random stars when you jump
+            Vector3 pos = new Vector3(park.transform.position.x + Random.Range(-10, 10)
+                                    , park.transform.position.y + 3,
+                                    park.transform.position.z + Random.Range(-10, 10));
+            Instantiate(Star, pos, Quaternion.identity);
             Vector3 position = this.transform.position;
             position.y++;
             this.transform.position = position;
+            
         }
         
         if(Input.GetKey(KeyCode.Space))
@@ -63,6 +72,8 @@ public class PlayerController : MonoBehaviour
             points += 1;
             SetPoints();
         }
+
+        
 
     }
 }
