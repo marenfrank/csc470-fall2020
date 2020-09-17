@@ -1,19 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float movementSpeed = 10;
     float rotateSpeed = 120f;
-    private int count;
+    public TextMeshProUGUI pointsText;
+    private int points;
+    public GameObject winTextObject;
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 0;
+        points = 0;
+        SetPoints();
+        winTextObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,17 +42,26 @@ public class PlayerController : MonoBehaviour
         }
 
 
-
-
-
 }
+
+        void SetPoints()
+        {
+        pointsText.text = "Points: " + points.ToString();
+
+        if(points >= 12)
+        {
+            winTextObject.SetActive(true);
+        }
+
+    }
 
         void OnTriggerEnter(Collider other)
         {
         if (other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
-            count += 1;
+            points += 1;
+            SetPoints();
         }
 
     }
