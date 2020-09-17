@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI pointsText;
     private int points;
     public GameObject winTextObject;
+    public GameObject loseTextObject;
     private Rigidbody rb;
     public GameObject Star;
     GameObject park;
@@ -20,9 +21,10 @@ public class PlayerController : MonoBehaviour
     {
         park = GameObject.Find("Park");
         rb = GetComponent<Rigidbody>();
-        points = 0;
+        points = -2;
         SetPoints();
         winTextObject.SetActive(false);
+       loseTextObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
         
         if(Input.GetKey(KeyCode.Space))
         {
-            transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
+            transform.Translate(transform.forward * Time.deltaTime * movementSpeed, Space.World);
         }
 
 
@@ -62,6 +64,11 @@ public class PlayerController : MonoBehaviour
             winTextObject.SetActive(true);
         }
 
+        if (points < -1)
+        {
+            loseTextObject.SetActive(true);
+        }
+
     }
 
         void OnTriggerEnter(Collider other)
@@ -73,7 +80,14 @@ public class PlayerController : MonoBehaviour
             SetPoints();
         }
 
-        
+        if (other.gameObject.CompareTag("Knife"))
+        {
+            Destroy(other.gameObject);
+            points -= 1;
+            SetPoints();
+        }
+
+
 
     }
 }
