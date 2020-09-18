@@ -2027,9 +2027,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 8
-  pointsText: {fileID: 680969186}
-  winTextObject: {fileID: 505497491}
-  loseTextObject: {fileID: 1019257515}
   Star: {fileID: 8511651845741142965, guid: 9bc9322db3ff045728daa14a784a87ba, type: 3}
 --- !u!114 &1586662748
 MonoBehaviour:
@@ -2044,6 +2041,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Knife: {fileID: 6773171480879692635, guid: b96956ebf55894959a7cfb8457b442bc, type: 3}
+  pointsText: {fileID: 680969186}
+  winTextObject: {fileID: 505497491}
+  loseTextObject: {fileID: 1019257515}
+  skateboard: {fileID: 6773171480879692635, guid: b96956ebf55894959a7cfb8457b442bc, type: 3}
 --- !u!1001 &1590474783
 PrefabInstance:
   m_ObjectHideFlags: 0

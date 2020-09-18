@@ -1,30 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float movementSpeed = 10;
     float rotateSpeed = 120f;
-    public TextMeshProUGUI pointsText;
-    private int points;
-    public GameObject winTextObject;
-    public GameObject loseTextObject;
     private Rigidbody rb;
     public GameObject Star;
     GameObject park;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         park = GameObject.Find("Park");
         rb = GetComponent<Rigidbody>();
-        points = -2;
-        SetPoints();
-        winTextObject.SetActive(false);
-       loseTextObject.SetActive(false);
+        
+        
     }
 
     // Update is called once per frame
@@ -52,42 +47,15 @@ public class PlayerController : MonoBehaviour
             transform.Translate(transform.forward * Time.deltaTime * movementSpeed, Space.World);
         }
 
+        
+       
+
 
 }
 
-        void SetPoints()
-        {
-        pointsText.text = "Points: " + points.ToString();
-
-        if(points >= 12)
-        {
-            winTextObject.SetActive(true);
-        }
-
-        if (points < -1)
-        {
-            loseTextObject.SetActive(true);
-        }
-
-    }
-
-        void OnTriggerEnter(Collider other)
-        {
-        if (other.gameObject.CompareTag("Coin"))
-        {
-            Destroy(other.gameObject);
-            points += 1;
-            SetPoints();
-        }
-
-        if (other.gameObject.CompareTag("Knife"))
-        {
-            Destroy(other.gameObject);
-            points -= 1;
-            SetPoints();
-        }
+       
 
 
 
     }
-}
+
