@@ -12,7 +12,7 @@ public class CellScript : MonoBehaviour
     public int y = -1;
 
     public bool nextAlive;
-    public bool _alive = false;
+    private bool _alive = false;
     public bool Alive
     {
         get
@@ -45,11 +45,18 @@ public class CellScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            this._alive = true;
-        } 
+        
+       
     }
 
-    
+
+
+    private void OnMouseDown()
+    {
+        this.Alive = !this.Alive;
+        
+    }
+
+
+
 }
