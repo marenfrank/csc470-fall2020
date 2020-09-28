@@ -7,10 +7,15 @@ public class CellScript : MonoBehaviour
     Renderer rend;
     public Color aliveColor;
     public Color deadColor;
+    public Color wasAliveColor;
+
+   
+    public bool wasAlive = false; 
 
     public int x = -1;
     public int y = -1;
 
+    
     public bool nextAlive;
     private bool _alive = false;
     public bool Alive
@@ -18,6 +23,7 @@ public class CellScript : MonoBehaviour
         get
         {
             return this._alive;
+
         }
         set
         {
@@ -25,11 +31,20 @@ public class CellScript : MonoBehaviour
 
             if (this._alive)
             {
+                wasAlive = true;
                 rend.material.color = aliveColor;
-            }
-            else
-            {
-                rend.material.color = deadColor;
+                
+
+            } else {
+                if (wasAlive)
+                {
+                    rend.material.color = wasAliveColor;
+
+                }
+                else {
+                    rend.material.color = deadColor;
+                }
+                
             }
         }
     }
@@ -45,10 +60,11 @@ public class CellScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-       
+
+
     }
 
+   
 
 
     private void OnMouseDown()

@@ -110,6 +110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aliveColor: {r: 0.9433962, g: 0, b: 0.7683677, a: 0}
   deadColor: {r: 0, g: 0, b: 0, a: 0}
+  wasAliveColor: {r: 0.056069765, g: 0.28428772, b: 0.7924528, a: 0}
+  wasAlive: 0
   x: -1
   y: -1
   nextAlive: 0
