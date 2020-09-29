@@ -9,7 +9,9 @@ public class CellScript : MonoBehaviour
     public Color deadColor;
     public Color wasAliveColor;
 
-   
+    private int aliveCount;
+    public int destroyCount;
+    
     public bool wasAlive = false; 
 
     public int x = -1;
@@ -31,6 +33,7 @@ public class CellScript : MonoBehaviour
 
             if (this._alive)
             {
+                aliveCount++;
                 wasAlive = true;
                 rend.material.color = aliveColor;
                 
@@ -54,6 +57,7 @@ public class CellScript : MonoBehaviour
     {
         rend = gameObject.GetComponent<Renderer>();
         this.Alive = Random.value < 0.5f;
+       
 
     }
 
@@ -65,7 +69,17 @@ public class CellScript : MonoBehaviour
     }
 
    
+    void Destroyed()
+    {
+        if (aliveCount == 4)
+        {
+           Destroy(this.gameObject);
+            destroyCount++;
+        }
+        
+    }
 
+    
 
     private void OnMouseDown()
     {

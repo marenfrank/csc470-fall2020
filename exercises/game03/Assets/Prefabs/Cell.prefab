@@ -111,6 +111,9 @@ MonoBehaviour:
   aliveColor: {r: 0.9433962, g: 0, b: 0.7683677, a: 0}
   deadColor: {r: 0, g: 0, b: 0, a: 0}
   wasAliveColor: {r: 0.056069765, g: 0.28428772, b: 0.7924528, a: 0}
+  destroyCount: 0
+  destroyText: {fileID: 1947878998434717058, guid: 53e320cf8f7ac4c9da634e06bcd6bd61, type: 3}
+  winText: {fileID: 4539515108051575172, guid: ef93c1cf63b1b4181a4b55c9758b1d17, type: 3}
   wasAlive: 0
   x: -1
   y: -1
