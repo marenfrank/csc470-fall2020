@@ -73,7 +73,7 @@ public class CellScript : MonoBehaviour
     {
         if (aliveCount == 4)
         {
-           Destroy(this.gameObject);
+            Destroy(gameObject);
             destroyCount++;
         }
         
