@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class BroomFlight : MonoBehaviour
@@ -95,6 +97,8 @@ public class BroomFlight : MonoBehaviour
 		if (points > 12)
         {
 			winTextObject.SetActive(true);
+
+			SceneManager.LoadScene("level2");
 		}
 	
     }

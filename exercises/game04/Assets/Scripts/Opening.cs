@@ -7,6 +7,6 @@ public class Opening : MonoBehaviour
 {
     public void OnMouseButton()
     {
-        SceneManager.LoadScene("game04");
+        SceneManager.LoadScene("level1");
     }
 }
