@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour
 {
-    public void OnMouseClick()
+    public void OnMouseButton()
     {
         SceneManager.LoadScene("game04");
     }

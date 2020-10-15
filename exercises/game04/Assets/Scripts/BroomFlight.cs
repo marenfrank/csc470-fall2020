@@ -16,9 +16,13 @@ public class BroomFlight : MonoBehaviour
 	float pitchModSpeedRate = 8f;
 	float rollSpeed = 80;
 
+	public Text pointsText;
+	private int points = 0;
+
 	// Start is called before the first frame update
 	void Start()
 	{
+		SetPoints();
 
 	}
 
@@ -65,17 +69,34 @@ public class BroomFlight : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			GameObject rock = Instantiate(rocksPrefab, transform.position + transform.forward * 3, Quaternion.identity);
-			Rigidbody applePieRB = rock.GetComponent<Rigidbody>();
-			applePieRB.AddForce(transform.forward * 8000);
+			Rigidbody rockRB = rock.GetComponent<Rigidbody>();
+			rockRB.AddForce(transform.forward * 8000);
 			Destroy(rock, 5);
 		}
 
 		// Position the camera behind and above the player.
-		Vector3 cameraPosition = transform.position - transform.forward * 35 + Vector3.up * 20;
+		Vector3 cameraPosition = transform.position - transform.forward * 35 + Vector3.up * 30;
 		Camera.main.transform.position = cameraPosition;
 		Vector3 lookAtPos = transform.position + transform.forward * 10;
 
 		// Rotate the camera so that it looks always in front of the plane.
 		Camera.main.transform.LookAt(lookAtPos, Vector3.up);
+	}
+
+	public void SetPoints()
+    {
+		pointsText.text = "Points - " + points.ToString();
+	
+    }
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("candy"))
+		{
+	
+			Destroy(other.gameObject);
+			points =+ 1;
+			SetPoints();
+		}
 	}
 }
