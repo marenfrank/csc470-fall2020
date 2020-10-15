@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class BroomFlight : MonoBehaviour
 {
 	// Start is called before the first frame update
@@ -19,10 +20,14 @@ public class BroomFlight : MonoBehaviour
 	public Text pointsText;
 	private int points = 0;
 
+	public GameObject winTextObject;
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		SetPoints();
+		winTextObject.SetActive(false);
+
 
 	}
 
@@ -86,6 +91,11 @@ public class BroomFlight : MonoBehaviour
 	public void SetPoints()
     {
 		pointsText.text = "Points - " + points.ToString();
+
+		if (points > 12)
+        {
+			winTextObject.SetActive(true);
+		}
 	
     }
 
