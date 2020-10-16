@@ -9,6 +9,8 @@ TagManager:
   - rock
   - Box
   - candy
+  - ghost
+  - bone
   layers:
   - Default
   - TransparentFX
