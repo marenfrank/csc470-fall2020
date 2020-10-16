@@ -112,5 +112,13 @@ public class BroomFlight : MonoBehaviour
 			points =+ 1;
 			SetPoints();
 		}
+
+		if (other.CompareTag("rock"))
+		{
+
+			SceneManager.LoadScene("level1");
+		}
 	}
+
+
 }
