@@ -6,6 +6,7 @@ public class Ghost : MonoBehaviour
 {
     GameObject witch;
     public bool chase = true;
+
     // Start is called before the first frame update
     void Start()
     {

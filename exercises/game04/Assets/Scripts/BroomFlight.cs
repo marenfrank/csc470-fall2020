@@ -82,9 +82,9 @@ public class BroomFlight : MonoBehaviour
 		}
 
 		// Position the camera behind and above the player.
-		Vector3 cameraPosition = transform.position - transform.forward * 35 + Vector3.up * 30;
+		Vector3 cameraPosition = transform.position - transform.forward * 45 + Vector3.up * 40;
 		Camera.main.transform.position = cameraPosition;
-		Vector3 lookAtPos = transform.position + transform.forward * 10;
+		Vector3 lookAtPos = transform.position + transform.forward * 20;
 
 		// Rotate the camera so that it looks always in front of the plane.
 		Camera.main.transform.LookAt(lookAtPos, Vector3.up);
