@@ -9,6 +9,6 @@ public class Opening : MonoBehaviour
     // Start is called before the first frame update
     public void OnMouseClick()
     {
-        SceneManager.LoadScene("game05");
+        SceneManager.LoadScene("CharacterSelector");
     }
 }
