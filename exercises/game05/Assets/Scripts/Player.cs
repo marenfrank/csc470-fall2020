@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
 
 
 public class Player : MonoBehaviour
@@ -22,14 +25,31 @@ public class Player : MonoBehaviour
 		SetPoints();
 	}
 
-	// Update is called once per frame
-	void Update()
+   
+
+    // Update is called once per frame
+    void Update()
 	{
 		if (currentHealth == 0)
         {
 			SceneManager.LoadScene("Lose");
 		}
-	}
+		if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+		{
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit hit;
+			if (Physics.Raycast(ray, out hit))
+			{
+				
+				if (hit.collider.gameObject.CompareTag("Cop"))
+				{
+					Destroy(hit.collider.gameObject);
+
+				}
+			}
+		}
+
+			}
 
 	void TakeDamage(int damage)
 	{
@@ -56,8 +76,8 @@ public class Player : MonoBehaviour
 
 	}
 
-	public void SetPoints()
-	{
+	void SetPoints()
+        {
 		pointsText.text = "Treats: " + points.ToString();
 
 		if (points == 10)
@@ -68,4 +88,7 @@ public class Player : MonoBehaviour
 	}
 
 
+
+
 }
+
