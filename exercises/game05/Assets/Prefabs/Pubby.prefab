@@ -106,6 +106,38 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: -4224091699277437997, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000058391947
+      objectReference: {fileID: 0}
+    - target: {fileID: -4224091699277437997, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.985349
+      objectReference: {fileID: 0}
+    - target: {fileID: -4224091699277437997, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000034164796
+      objectReference: {fileID: 0}
+    - target: {fileID: -4224091699277437997, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.17055008
+      objectReference: {fileID: 0}
+    - target: {fileID: -4224091699277437997, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0000000018451076
+      objectReference: {fileID: 0}
+    - target: {fileID: -4224091699277437997, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.627803e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: -4224091699277437997, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5414858e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: -4224091699277437997, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -160.36
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c572ca7300dd442c9ae6c79d8982c1d6, type: 3}
       propertyPath: m_Name
       value: Mesh_Puppy

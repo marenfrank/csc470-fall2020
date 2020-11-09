@@ -11,6 +11,7 @@ public class CharacterSelection : MonoBehaviour
     // Start is called before the first frame update
      void  Start()
     {
+        index = PlayerPrefs.GetInt("CharacterSelected");
         characterList = new GameObject[transform.childCount];
 
         for (int i = 0; i < transform.childCount; i++)
@@ -24,9 +25,9 @@ public class CharacterSelection : MonoBehaviour
             go.SetActive(false);
         }
 
-        if (characterList[0])
+        if (characterList[index])
         {
-            characterList[0].SetActive(true);
+            characterList[index].SetActive(true);
         }
     }
 
@@ -58,6 +59,7 @@ public class CharacterSelection : MonoBehaviour
 
     public void ChooseButton()
     {
+        PlayerPrefs.SetInt("CharacterSelected", index);
         SceneManager.LoadScene("game05");
 
     }
