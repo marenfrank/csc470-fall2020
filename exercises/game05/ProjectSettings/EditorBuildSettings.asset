@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Opening.unity
     guid: 1c99a1ae8515245e8bd1435273a13c9b
   - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: b5708fb4b3f254cacbf65ae41a2dfb2b
+  - enabled: 1
     path: Assets/Scenes/CharacterSelector.unity
     guid: 601a436c76abf4c04a33a21e933ceb62
   - enabled: 1

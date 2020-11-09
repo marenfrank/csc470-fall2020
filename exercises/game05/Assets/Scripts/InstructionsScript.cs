@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Opening : MonoBehaviour
+public class InstructionsScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void OnMouseClick()
     {
-        SceneManager.LoadScene("Instructions");
+        SceneManager.LoadScene("CharacterSelector");
     }
 }
