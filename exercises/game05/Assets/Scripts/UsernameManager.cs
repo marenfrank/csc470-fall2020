@@ -18,5 +18,6 @@ public class UsernameManager : MonoBehaviour
         textDisplay.GetComponent<Text>().text = "Say hello to your dog " + dogName;
 
 
+
     }
 }
