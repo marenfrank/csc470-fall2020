@@ -9,13 +9,11 @@ public class UsernameManager : MonoBehaviour
     public GameObject inputfeild;
     public GameObject textDisplay;
 
-    public GameObject textBox;
-    public GameObject button;
 
     public void StoreName()
     {
         dogName = inputfeild.GetComponent<Text>().text;
-        textDisplay.GetComponent<Text>().text = "Say hello to your dog " + dogName;
+        textDisplay.GetComponent<Text>().text = "Say hello to your new dog " + dogName + "!";
 
 
 
