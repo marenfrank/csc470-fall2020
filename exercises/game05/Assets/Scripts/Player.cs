@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
 	public Healthbar healthBar;
 
-	
+	AudioSource pew;
 
 	// Start is called before the first frame update
 	void Start()
@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 		healthBar.SetMaxHealth(maxHealth);
 		SetPoints();
 
+		pew = GetComponent<AudioSource>();
 		
 	}
 
@@ -48,7 +49,7 @@ public class Player : MonoBehaviour
 				if (hit.collider.gameObject.CompareTag("Cop"))
 				{
 					Destroy(hit.collider.gameObject);
-					
+					pew.Play();
 
 				}
 
