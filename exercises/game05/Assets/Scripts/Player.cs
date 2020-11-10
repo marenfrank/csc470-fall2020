@@ -51,6 +51,13 @@ public class Player : MonoBehaviour
 					
 
 				}
+
+				if (hit.collider.gameObject.CompareTag("Gem"))
+				{
+					Destroy(hit.collider.gameObject);
+					currentHealth += 20;
+					healthBar.SetHealth(currentHealth);
+				}
 			}
 		}
 
@@ -62,6 +69,18 @@ public class Player : MonoBehaviour
 
 		healthBar.SetHealth(currentHealth);
 	}
+
+	void SetPoints()
+	{
+		pointsText.text = "Treats: " + points.ToString();
+
+		if (points == 10)
+		{
+			SceneManager.LoadScene("Win");
+		}
+
+	}
+
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -77,23 +96,9 @@ public class Player : MonoBehaviour
 			SetPoints();
 		}
 
-
-
-	}
-
-	void SetPoints()
-        {
-		pointsText.text = "Treats: " + points.ToString();
-
-		if (points == 10)
-		{
-			SceneManager.LoadScene("Win");
-		}
-
+		
+    }
 	}
 
 
-
-
-}
 

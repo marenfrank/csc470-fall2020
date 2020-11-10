@@ -406,7 +406,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treat: {fileID: 1196735296442508433, guid: f7255cc50f68b4986b9803fff408ea4d, type: 3}
+  gem: {fileID: 4536725177611755692, guid: 44db34bd0b806488aa924accf9da6467, type: 3}
   treatNum: 0
+  gemNum: 0
 --- !u!4 &75495783
 Transform:
   m_ObjectHideFlags: 0
@@ -2538,9 +2540,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0cdd372caafa041c2a565f377af874d3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f70f8916a24064006a920f2876f11977, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.45
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
