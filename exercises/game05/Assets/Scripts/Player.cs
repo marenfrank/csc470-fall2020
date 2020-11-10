@@ -17,12 +17,16 @@ public class Player : MonoBehaviour
 
 	public Healthbar healthBar;
 
+	
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
 		SetPoints();
+
+		
 	}
 
    
@@ -44,6 +48,7 @@ public class Player : MonoBehaviour
 				if (hit.collider.gameObject.CompareTag("Cop"))
 				{
 					Destroy(hit.collider.gameObject);
+					
 
 				}
 			}

@@ -7,12 +7,15 @@ public class CharacterSelection : MonoBehaviour
 {
     private GameObject[] characterList;
     private int index;
+   
 
     // Start is called before the first frame update
-     void  Start()
+    void  Start()
     {
         index = PlayerPrefs.GetInt("CharacterSelected");
         characterList = new GameObject[transform.childCount];
+
+      
 
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -60,6 +63,7 @@ public class CharacterSelection : MonoBehaviour
     public void ChooseButton()
     {
         PlayerPrefs.SetInt("CharacterSelected", index);
+    
         SceneManager.LoadScene("game05");
 
     }

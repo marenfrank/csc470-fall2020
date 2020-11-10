@@ -23,6 +23,8 @@ public class PlayerMover : MonoBehaviour
         moveVector.x = Input.GetAxis("Horizontal") * 10;
         moveVector.z = Input.GetAxis("Vertical") * 10;
 
+       
+
         cc.Move(moveVector * Time.deltaTime);
     }
 

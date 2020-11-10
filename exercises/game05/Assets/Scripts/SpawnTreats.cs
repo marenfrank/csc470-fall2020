@@ -17,7 +17,7 @@ public class SpawnTreats : MonoBehaviour
 
     void GenerateTreats()
     {
-        while(treatNum < 10)
+        while(treatNum < 11)
         {
             xPos = Random.Range(-120, 120);
             zPos = Random.Range(-120, 120);
