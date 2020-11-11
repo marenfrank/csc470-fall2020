@@ -5,28 +5,40 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     CharacterController cc;
-   
+    float xpos;
+    float zpos;
+    public int speed = 6;
+
+    float target;
 
     // Start is called before the first frame update
     void Start()
     {
         cc = GetComponent<CharacterController>();
-      
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveVector = Vector3.zero;
 
-        moveVector.x = Input.GetAxis("Horizontal") * 10;
-        moveVector.z = Input.GetAxis("Vertical") * 10;
+        xpos = Input.GetAxisRaw("Horizontal");
+        zpos = Input.GetAxisRaw("Vertical");
 
-       
+        Vector3 direction = new Vector3(xpos, 0f, zpos).normalized;
 
-        cc.Move(moveVector * Time.deltaTime);
-    }
+        if (direction.magnitude >= 0.1f)
+        {
+            target = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, target, 0f);
+
+            cc.Move(direction * speed * Time.deltaTime);
+        }
+
+
+}
+
 
   
 }

@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
 
 	AudioSource pew;
 
+	
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
 		SetPoints();
 
 		pew = GetComponent<AudioSource>();
+
 		
 	}
 
@@ -35,6 +38,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
+		
+
 		if (currentHealth == 0)
         {
 			SceneManager.LoadScene("Lose");
@@ -48,13 +53,17 @@ public class Player : MonoBehaviour
 				
 				if (hit.collider.gameObject.CompareTag("Cop"))
 				{
+					
 					Destroy(hit.collider.gameObject);
 					pew.Play();
+
+					
 
 				}
 
 				if (hit.collider.gameObject.CompareTag("Gem"))
 				{
+					
 					Destroy(hit.collider.gameObject);
 					currentHealth += 20;
 					healthBar.SetHealth(currentHealth);
@@ -87,7 +96,10 @@ public class Player : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Cop"))
 		{
+			
 			TakeDamage(20);
+
+			
 		}
 
 		if (other.gameObject.CompareTag("Treat"))
@@ -99,7 +111,11 @@ public class Player : MonoBehaviour
 
 		
     }
-	}
+
+
+	
+    
+}
 
 
 
