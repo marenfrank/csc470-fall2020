@@ -1,6 +1,6 @@
-#Design Document
+# Design Document
 
-##Game Plan 
+## Game Plan 
 * Core Mechanic:  
 * Input 
 * Visual Style:
@@ -8,9 +8,9 @@
 * Interface sketches:
 * Story/theme description:
 
-##Targets
+## Targets
 * Low-bar:
 * Expected:
 * High-bar: 
 
-##Timeline 
+## Timeline 
