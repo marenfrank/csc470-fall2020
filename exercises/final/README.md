@@ -1,6 +1,6 @@
 # Design Document
 
-## Sweet RevengeGame Plan 
+## Sweet Revenge Game Plan 
 * **Core Mechanic**: In my game, your character (the saint) maneuvers around the game environment (the church) by walking or running. When they touch a key they collect it. The player can enter new rooms after they retrieve a key by clicking on the doors. There are also many bonus items that the character can collect by clicking on them and choosing to add them to their inventory. To retrieve an item from inventory the player clicks on the inventory button in the corner of the screen.  
 * **Input**: The arrow keys are what the character uses to move around, increasing speed the longer they hold the key down. To jump the character presses the spacebar. Finally, to collect items for your inventory or to enter another room you use mouse clicks.  
 * **Visual Style**: I want the setting to be a gothic church with lots of black, reds, and browns. I want there to be a creepy vibe, but with my limited rendering skills it will still have very blocky characters, furniture, rooms, etc.  
