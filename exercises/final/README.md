@@ -8,11 +8,9 @@
 * **Interface sketches**:
 ![sketch](https://github.com/marenfrank/csc470-fall2020/blob/master/exercises/final/Image/sketch.JPG)
 
-* Story/theme description: This game is based off a mini game I got on a My Chemical Romance CD when I was a kid. The gist of the story goes that a bride and groom have just been killed on their wedding day, by a mysterious bandit. The game will open with this scene followed by a call for them to “seek revenge.” To get revenge the character (a saint) needs to search through the church to find a weapon (a knife) they can use to kill the bandit.  
+* **Story/theme description**: This game is based off a mini game I got on a My Chemical Romance CD when I was a kid. The gist of the story goes that a bride and groom have just been killed on their wedding day, by a mysterious bandit. The game will open with this scene followed by a call for them to “seek revenge.” To get revenge the character (a saint) needs to search through the church to find a weapon (a knife) they can use to kill the bandit.  
 Throughout the game the player needs to collect keys that let them into different rooms in the church. They can also collect bonus items to put in their inventory. Crosses give you a health boost, little tombstones make you invisible to ghosts for a certain amount of time, etc.   
-
 The ghosts are all around the church and getting hit by them makes you lose health. If you lose all your health, then you lose the game and have to start over. 
-
 The last part of the game involves fighting the bandit. You have to chase him and hit him with the knife until his health runs out and you seek your revenge!  
 ## Targets
 * **Low-bar**: I at least want to create a large environment with several rooms that the character can navigate and a final boss scene.
