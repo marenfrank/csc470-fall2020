@@ -6,7 +6,7 @@
 * **Visual Style**: I want the setting to be a gothic church with lots of black, reds, and browns. I want there to be a creepy vibe, but with my limited rendering skills it will still have very blocky characters, furniture, rooms, etc.  
 * **Audio Style**: To match the gothic church visuals I want some creepy sounding organ music. I also know I want there to be church bells that chime when you enter a new room or level up. I want the ghosts to have their own spooky “Oooo” sound that gets louder the closer they get to the player to warn them. Lastly, a happier chime will play when a character collects a key or puts an item in their inventory. 
 * **Interface sketches**:
-![sketch](Image/sketch.jpeg)
+![sketch](https://github.com/marenfrank/csc470-fall2020/blob/master/exercises/final/Image/sketch.JPG)
 
 * Story/theme description: This game is based off a mini game I got on a My Chemical Romance CD when I was a kid. The gist of the story goes that a bride and groom have just been killed on their wedding day, by a mysterious bandit. The game will open with this scene followed by a call for them to “seek revenge.” To get revenge the character (a saint) needs to search through the church to find a weapon (a knife) they can use to kill the bandit. /
 Throughout the game the player needs to collect keys that let them into different rooms in the church. They can also collect bonus items to put in their inventory. Crosses give you a health boost, little tombstones make you invisible to ghosts for a certain amount of time, etc. /
