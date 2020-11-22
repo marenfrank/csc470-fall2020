@@ -8,10 +8,10 @@
 * **Interface sketches**:
 ![sketch](https://github.com/marenfrank/csc470-fall2020/blob/master/exercises/final/Image/sketch.JPG)
 
-* Story/theme description: This game is based off a mini game I got on a My Chemical Romance CD when I was a kid. The gist of the story goes that a bride and groom have just been killed on their wedding day, by a mysterious bandit. The game will open with this scene followed by a call for them to “seek revenge.” To get revenge the character (a saint) needs to search through the church to find a weapon (a knife) they can use to kill the bandit. /
-Throughout the game the player needs to collect keys that let them into different rooms in the church. They can also collect bonus items to put in their inventory. Crosses give you a health boost, little tombstones make you invisible to ghosts for a certain amount of time, etc. /
+* Story/theme description: This game is based off a mini game I got on a My Chemical Romance CD when I was a kid. The gist of the story goes that a bride and groom have just been killed on their wedding day, by a mysterious bandit. The game will open with this scene followed by a call for them to “seek revenge.” To get revenge the character (a saint) needs to search through the church to find a weapon (a knife) they can use to kill the bandit.  
+Throughout the game the player needs to collect keys that let them into different rooms in the church. They can also collect bonus items to put in their inventory. Crosses give you a health boost, little tombstones make you invisible to ghosts for a certain amount of time, etc.   
 
-The ghosts are all around the church and getting hit by them makes you lose health. If you lose all your health, then you lose the game and have to start over. /
+The ghosts are all around the church and getting hit by them makes you lose health. If you lose all your health, then you lose the game and have to start over. 
 
 The last part of the game involves fighting the bandit. You have to chase him and hit him with the knife until his health runs out and you seek your revenge!  
 ## Targets
@@ -20,7 +20,7 @@ The last part of the game involves fighting the bandit. You have to chase him an
 * **High-bar**: My highbar would add lots of finesse to the game: have all movement be super smooth, have ghosts with their own animations, possibly have inventory elements that edit the way the character looks, have a way to save the game so you don’t have to start the game completely over if you lose the boss battle.  
 
 ## Timeline 
-(All subject to change) /
+(All subject to change) 
 * **11/22**: Design Document completed, Start collecting models to use, finish start scene 
 * **11/23**: Build environment 
 * **11/24**: Give character movement, implement ghosts
