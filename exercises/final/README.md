@@ -1,6 +1,6 @@
-#Design Document
+# Design Document
 
-##Sweet RevengeGame Plan 
+## Sweet RevengeGame Plan 
 * **Core Mechanic**: In my game, your character (the saint) maneuvers around the game environment (the church) by walking or running. When they touch a key they collect it. The player can enter new rooms after they retrieve a key by clicking on the doors. There are also many bonus items that the character can collect by clicking on them and choosing to add them to their inventory. To retrieve an item from inventory the player clicks on the inventory button in the corner of the screen.  
 * **Input**: The arrow keys are what the character uses to move around, increasing speed the longer they hold the key down. To jump the character presses the spacebar. Finally, to collect items for your inventory or to enter another room you use mouse clicks.  
 * **Visual Style**: I want the setting to be a gothic church with lots of black, reds, and browns. I want there to be a creepy vibe, but with my limited rendering skills it will still have very blocky characters, furniture, rooms, etc.  
@@ -14,12 +14,12 @@ Throughout the game the player needs to collect keys that let them into differen
 The ghosts are all around the church and getting hit by them makes you lose health. If you lose all your health, then you lose the game and have to start over. /
 
 The last part of the game involves fighting the bandit. You have to chase him and hit him with the knife until his health runs out and you seek your revenge!  
-##Targets
+## Targets
 * **Low-bar**: I at least want to create a large environment with several rooms that the character can navigate and a final boss scene.
 * **Expected**: My expected game will have all the items described in the story/theme section. 
 * **High-bar**: My highbar would add lots of finesse to the game: have all movement be super smooth, have ghosts with their own animations, possibly have inventory elements that edit the way the character looks, have a way to save the game so you don’t have to start the game completely over if you lose the boss battle.  
 
-##Timeline 
+## Timeline 
 (All subject to change) /
 * **11/22**: Design Document completed, Start collecting models to use, finish start scene 
 * **11/23**: Build environment 
