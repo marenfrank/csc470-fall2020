@@ -1,0 +1,27 @@
+# File produced by AccuTrans 3D
+
+newmtl Hall_Bench
+  Ns 39.1
+  d 1.0
+  illum 2
+  Kd 0.1922 0.1294 0.0392
+  Ka 0.1922 0.1294 0.0392
+  Ks 0.898 0.898 0.898
+  map_Kd E:\BEECH3~1.jpg
+
+newmtl Hall_Bench_1
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.2275 0.2235 0.2431
+  Ka 0.2275 0.2235 0.2431
+  Ks 0.898 0.898 0.898
+
+newmtl Hall_Bench_2
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.349 0.251 0.1647
+  Ka 0.349 0.251 0.1647
+  Ks 0.898 0.898 0.898
+  map_Kd E:\BOIS-~19.jpg
