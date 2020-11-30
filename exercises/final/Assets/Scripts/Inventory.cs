@@ -20,6 +20,12 @@ public class Inventory : MonoBehaviour
         {
             slot[i] = slotHolder.transform.GetChild(i).gameObject;
 
+            if (slot[i].GetComponent<Slot>().item == null)
+            {
+                slot[i].GetComponent<Slot>().empty = true;
+
+            }
+                
         }
     }
 
@@ -42,5 +48,41 @@ public class Inventory : MonoBehaviour
                
             
         }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Item"))
+        {
+            GameObject itemPickedUp = other.gameObject;
+            Item item = itemPickedUp.GetComponent<Item>();
+
+            AddItem(itemPickedUp, item.ID, item.descrip, item.type, item.icon);
+        }
+    }
+
+    public void AddItem(GameObject itemObject, int itemID, string itemDecrip, string itemType, Sprite itemIcon)
+    {
+        for(int i =0; i < allSlots; i++)
+        {
+            if (slot[i].GetComponent<Slot>().empty)
+            {
+                itemObject.GetComponent<Item>().pickedUp = true;
+                slot[i].GetComponent<Slot>().item = itemObject;
+                slot[i].GetComponent<Slot>().icon = itemIcon;
+                slot[i].GetComponent<Slot>().type = itemType;
+                slot[i].GetComponent<Slot>().ID = itemID;
+                slot[i].GetComponent<Slot>().descrip = itemDecrip;
+
+                itemObject.transform.parent = slot[i].transform;
+                itemObject.SetActive(false);
+
+                slot[i].GetComponent<Slot>().UpdateSlot();
+                slot[i].GetComponent<Slot>().empty = false;
+            }
+
+            return;
+        }
+
     }
 }
