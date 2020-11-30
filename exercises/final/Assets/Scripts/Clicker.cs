@@ -33,9 +33,13 @@ public class Clicker : MonoBehaviour
 					points++;
 					SetPoints();
 
+				}
 
+				if (hit.collider.gameObject.CompareTag("Key"))
+				{
 
-
+					Destroy(hit.collider.gameObject);
+					
 
 				}
 			}
