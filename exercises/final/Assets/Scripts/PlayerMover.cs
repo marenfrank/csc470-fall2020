@@ -9,6 +9,8 @@ public class PlayerMover : MonoBehaviour
     float xpos;
     float zpos;
     public int speed = 6;
+    public Transform camera;
+    public int jump = 10;
 
     float target;
 
@@ -31,11 +33,20 @@ public class PlayerMover : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
-            target = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            target = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
             transform.rotation = Quaternion.Euler(0f, target, 0f);
 
-            cc.Move(direction * speed * Time.deltaTime);
+            Vector3 moveDir = Quaternion.Euler(0f, target, 0f) * Vector3.forward;
+
+            cc.Move(moveDir.normalized * speed * Time.deltaTime);
         }
+
+        if (Input.GetKey(KeyCode.Space) && cc.isGrounded)
+        {
+            Vector3 position = this.transform.position;
+            position.y++;
+        }
+
 
     }
 }
