@@ -53,6 +53,7 @@ MonoBehaviour:
   pickedUp: 0
   equipped: 0
   weapon: {fileID: 0}
+  key: {fileID: 4019628914831573984, guid: 6a2e371789d63443ebce824aafd15131, type: 3}
   weaponManager: {fileID: 0}
   playersWeapon: 0
 --- !u!54 &5426893289899200550

@@ -13,12 +13,16 @@ public class Item : MonoBehaviour
     [HideInInspector]
     public bool equipped;
 
-    
+
     [HideInInspector]
     public GameObject weapon;
 
     [HideInInspector]
-    public GameObject weaponManager; 
+    public GameObject key;
+
+    [HideInInspector]
+    public GameObject weaponManager;
+
 
     public bool playersWeapon;
 
@@ -27,7 +31,7 @@ public class Item : MonoBehaviour
     public void Start()
     {
         weaponManager = GameObject.FindWithTag("WeaponManager");
-
+        
         if (!playersWeapon)
         {
             int allWeapons = weaponManager.transform.childCount;
@@ -36,8 +40,11 @@ public class Item : MonoBehaviour
                 if(weaponManager.transform.GetChild(i).gameObject.GetComponent<Item>().ID == ID)
                 {
                     weapon = weaponManager.transform.GetChild(i).gameObject;
+                   
                 }
             }
+
+           
         }
     }
 
@@ -73,7 +80,12 @@ public class Item : MonoBehaviour
 
         //health
 
-        //protection
+        //key
+        if (type == "key")
+        {
+            key.gameObject.SetActive(true);
+            key.GetComponent<Item>().equipped = true;
+        }
 
 
     }

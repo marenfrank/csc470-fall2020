@@ -9,6 +9,7 @@ TagManager:
   - Ghost
   - Item
   - WeaponManager
+  - KeyManager
   layers:
   - Default
   - TransparentFX

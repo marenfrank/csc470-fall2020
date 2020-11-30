@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4019628914831573989}
   - component: {fileID: 4019628914831573990}
   - component: {fileID: -3546304634149008722}
+  - component: {fileID: -559173632237722336}
   m_Layer: 0
   m_Name: Key
-  m_TagString: Key
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,6 +76,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f481b10db5b6841fa81207b572f4372c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-559173632237722336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019628914831573984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c64a8fcfe53640a7af4e32fd3a953eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 2
+  descrip: Key to unlock doors!
+  type: Key
+  icon: {fileID: 21300000, guid: 850bd915294f54b9389e4db64ae43d8a, type: 3}
+  pickedUp: 0
+  equipped: 0
+  weapon: {fileID: 5418207875751263612, guid: 550226b7eefad4a25b2948cec65bac9c, type: 3}
+  key: {fileID: 4019628914831573984}
+  weaponManager: {fileID: 0}
+  playersWeapon: 0
 --- !u!1001 &4019628913430950331
 PrefabInstance:
   m_ObjectHideFlags: 0

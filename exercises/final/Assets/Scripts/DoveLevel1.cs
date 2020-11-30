@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DoveLevel1 : MonoBehaviour
 {
-     public GameObject dove;
-    public GameObject key; 
+    public GameObject dove; 
     private int xPos;
     private int zPos;
     public int doveNum = 0;
@@ -14,7 +13,7 @@ public class DoveLevel1 : MonoBehaviour
     void Start()
     {
         GenerateDoves();
-        GenerateKey();
+        
     }
 
     void GenerateDoves()
@@ -30,15 +29,5 @@ public class DoveLevel1 : MonoBehaviour
         }
     }
 
-    void GenerateKey()
-    {
-       
-            xPos = Random.Range(-15, 15);
-            zPos = Random.Range(-8, 8);
-
-            Instantiate(key, new Vector3(xPos, 2, zPos), Quaternion.identity);
-
-           
-        
-    }
+    
 }

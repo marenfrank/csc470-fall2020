@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
 		{
 
 			TakeDamage(20);
+			Destroy(other.gameObject, 3);
 
 
 		}
