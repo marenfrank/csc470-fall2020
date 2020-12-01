@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  mdr: 4
+  mdr: 6
 --- !u!114 &5679503659853491281
 MonoBehaviour:
   m_ObjectHideFlags: 0
