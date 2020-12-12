@@ -5,28 +5,28 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    private NavMeshAgent mob;
-    public GameObject player;
+    private NavMeshAgent Ghost;
+    public GameObject Player;
 
-    public float mdr = 4.0f;
+    public float GhostDistance = 6.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        mob = GetComponent<NavMeshAgent>();
+        Ghost = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.transform.position);
+        float distance = Vector3.Distance(transform.position, Player.transform.position);
 
-        if(distance < mdr)
+        if(distance < GhostDistance)
         {
-            Vector3 dirToPlayer = transform.position - player.transform.position;
+            Vector3 dirToPlayer = transform.position - Player.transform.position;
             Vector3 newPos = transform.position - dirToPlayer;
 
-            mob.SetDestination(newPos);
+            Ghost.SetDestination(newPos);
         }
         
     }

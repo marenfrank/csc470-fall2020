@@ -8,7 +8,7 @@ public class PlayerMover : MonoBehaviour
     CharacterController cc;
     float xpos;
     float zpos;
-    public int speed = 6;
+    public int speed = 10;
     public Transform camera;
     public int jump = 10;
 

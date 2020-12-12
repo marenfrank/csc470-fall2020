@@ -4,6 +4,8 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Clicker : MonoBehaviour
 {
@@ -35,13 +37,6 @@ public class Clicker : MonoBehaviour
 
 				}
 
-				if (hit.collider.gameObject.CompareTag("Key"))
-				{
-
-					Destroy(hit.collider.gameObject);
-					
-
-				}
 			}
 		}
 	}
@@ -49,7 +44,10 @@ public class Clicker : MonoBehaviour
 	void SetPoints()
 	{
 		pointsText.text = points.ToString();
-
+		if(points == 12)
+        {
+			SceneManager.LoadScene("Level 2 Instructions");
+		}
 		
 	}
 }
